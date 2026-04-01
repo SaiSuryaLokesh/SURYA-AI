@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="top-section">
+            <button class="icon-btn" id="menu-btn">
+                <span class="material-symbols-rounded">menu</span>
+            </button>
+            <button class="icon-btn new-chat" id="new-chat-btn">
+                <span class="material-symbols-rounded">edit_square</span>
+            </button>
+            
+            <div class="session-list" id="session-list">
+                <button class="session-btn active" data-id="1">
+                    <span class="material-symbols-rounded">chat_bubble</span>1
+                </button>
+                <button class="session-btn" data-id="2">
+                    <span class="material-symbols-rounded">chat_bubble</span>2
+                </button>
+                <button class="session-btn" data-id="3">
+                    <span class="material-symbols-rounded">chat_bubble</span>3
+                </button>
+                <button class="session-btn" data-id="4">
+                    <span class="material-symbols-rounded">chat_bubble</span>4
+                </button>
+                <button class="session-btn" data-id="5">
+                    <span class="material-symbols-rounded">chat_bubble</span>5
+                </button>
+                <button class="session-btn" data-id="6">
+                    <span class="material-symbols-rounded">chat_bubble</span>6
+                </button>
+            </div>
+        </div>
+        <div class="bottom-section">
+            <button class="icon-btn">
+                <span class="material-symbols-rounded">settings</span>
+                <span class="dot"></span>
+            </button>
+        </div>
+    </aside>
+
+    <main class="main-container">
+        <header class="top-nav">
+            <div class="logo-area">
+                <span class="logo-text">Gemini</span>
+            </div>
+            <div class="nav-actions">
+                <button class="upgrade-btn">
+                    <span class="material-symbols-rounded star-icon">sparkles</span>
+                    Upgrade to Google AI Plus
+                </button>
+            </div>
+        </header>
+
+        <section class="content-wrapper">
+            <div class="hero-section" id="hero-section">
+                <div class="greeting-container">
+                    <span class="gemini-icon material-symbols-rounded">sparkles</span>
+                    <h1 class="greeting-text">Hi SURYA</h1>
+                </div>
+                <h2 class="sub-greeting">Where should we start?</h2>
+            </div>
+            
+            <div class="chat-container" id="chat-container" style="display: none;">
+                <!-- Messages will be injected here dynamically -->
+            </div>
+
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <input type="text" placeholder="Ask Gemini 3" id="gemini-input">
+                </div>
+                <div class="input-controls">
+                    <div class="left-controls">
+                        <button class="control-btn" id="upload-trigger-btn" onclick="document.getElementById('pdf-upload').click()">
+                            <span class="material-symbols-rounded">add</span>
+                        </button>
+                        <input type="file" id="pdf-upload" accept="application/pdf" style="display: none;" />
+                        <button class="control-btn dropdown">
+                            <span class="material-symbols-rounded">analytics</span>
+                            Tools
+                            <span class="dot-active"></span>
+                        </button>
+                    </div>
+                    <div class="right-controls">
+                        <button class="control-btn dropdown">
+                            Fast
+                            <span class="material-symbols-rounded">expand_more</span>
+                        </button>
+                        <button class="control-btn mic-btn">
+                            <span class="material-symbols-rounded">mic</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="suggestions-row">
+                <button class="suggestion-chip">
+                    <span class="material-symbols-rounded chip-icon color-image">image</span>
+                    Create image
+                </button>
+                <button class="suggestion-chip">
+                    <span class="material-symbols-rounded chip-icon color-ipl">sports_cricket</span>
+                    Follow IPL
+                </button>
+                <button class="suggestion-chip">
+                    <span class="material-symbols-rounded chip-icon color-music">music_note</span>
+                    Create music
+                </button>
+                <button class="suggestion-chip">
+                    <span class="material-symbols-rounded chip-icon">school</span>
+                    Help me learn
+                </button>
+                <button class="suggestion-chip">
+                    <span class="material-symbols-rounded chip-icon">bolt</span>
+                    Boost my day
+                </button>
+                <button class="suggestion-chip">
+                    <span class="material-symbols-rounded chip-icon">edit</span>
+                    Write anything
+                </button>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
